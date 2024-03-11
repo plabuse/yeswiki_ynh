@@ -64,7 +64,7 @@ ynh_script_progression --message="Upgrading LDAP plugin..." --weight=3
 # Download LDAP plugin from yeswiki repository
 ynh_secure_remove "$install_dir/tools/loginldap"
 mkdir -p "$install_dir/tools/loginldap"
-ynh_setup_source --dest_dir="$install_dir/tools/loginldap" --source_id="loginldap"
+ynh_setup_source --dest_dir="$install_dir/tools/loginldap" --source_id="loginldap" --full_replace=1
 
 if ! grep -q "ldap_host" "$install_dir/wakka.config.php"
 then
